@@ -1,0 +1,114 @@
+/* Menu.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    background-color: #f0f0f0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    height: auto;
+}
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0a043b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.Mtext {
+    font-size: 50px;
+    margin-top: 50px;
+    padding: 5px 0px;
+    text-align: center;
+    opacity: 0; /* Initially hide the text */
+    transform: translateY(-100%); /* Move the text above the viewport */
+    animation: slideDown 2s ease forwards; /* Apply animation */
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%); /* Start position above the viewport */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End position at the top of the viewport */
+    }
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(8, 8, 8, 0.1);
+    width: 500px;
+    height: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #0a0a0a;
+}
+
+input[type="text"],
+input[type="file"],
+textarea,
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #080e41;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color:  #030731;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="file"],
+    textarea,
+    select {
+        width: calc(100% - 10px);
+    }
+}
+

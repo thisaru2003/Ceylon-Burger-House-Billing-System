@@ -1,0 +1,100 @@
+
+footer {
+    background-color:rgb(2, 0, 10);
+    color: white;
+    padding: 15px 25px;
+}
+  
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex-basis: 25%;
+    padding: 20px;
+}
+  
+.footer-section h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+  
+.footer-section p {
+    font-size: 0.95rem;
+}
+  
+.contact {
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+  
+.contact span {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+  
+.links li {
+    margin-bottom: 10px;
+}
+  
+.links a {
+    color: #fff;
+    text-decoration: none;
+}
+  
+.contact-form textarea {
+    height: 90px;
+}
+  
+.contact-input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+  
+.contact-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(185, 201, 185);
+    color: rgb(19, 18, 18);
+    cursor: pointer;
+}
+  
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #777;
+    font-size: 0.9rem;
+}
+.social-icons a i {
+    color: rgb(242, 248, 242);
+}
+.social-icons a {
+    margin-right: 14px; /* Increase the gap between icons */
+}
+.button {
+    width: 325px;
+    padding: 15px 20px;
+    background-color:rgb(5, 12, 73); /* Blue color */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove border */
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 15px;
+}
+.button:hover {
+    background-color: #040727; /* Darker blue color on hover */
+}

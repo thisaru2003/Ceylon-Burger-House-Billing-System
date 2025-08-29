@@ -1,0 +1,180 @@
+header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    align-items: center;
+    padding: 20px 90px;
+    transition: 0.5s all;
+    opacity: 1;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Brand & Navigation styles */
+span1 {
+    color: rgb(1, 10, 6);
+    font-size: 23px;
+}
+
+span2 {
+    color: rgb(12, 9, 1);
+    font-size: 25px;
+}
+
+span2 img {
+    height: 35px;
+    padding: 0px 5px;
+}
+
+header .brand {
+    color: #000;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+}
+
+header .navigation {
+    position: relative;
+}
+
+header .navigation .navigation-items a {
+    position: relative;
+    color: black;
+    font-size: 1em;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a::before {
+    content: '';
+    position: absolute;
+    background: rgb(5, 157, 88);
+    width: 0;
+    height: 3px;
+    margin-bottom: -2px;
+    bottom: 0px;
+    border-radius: 50px;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover::before {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.brand {
+    margin-top: 10px;
+}
+
+header .user-info {
+    position: relative;
+    color: black;
+    font-size: 1em;
+    margin-left: 30px;
+    display: flex;
+}
+
+header .user-info span {
+    margin-right: 15px;
+    font-weight: bold; /* Bold the welcome message and user name */
+}
+
+header .user-info a {
+    color: black;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 1em;
+    transition: 0.3s ease;
+}
+
+header .user-info a:hover {
+    color: rgb(5, 157, 88);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(rgba(249, 249, 249, 0.5), rgba(255, 255, 255, 0));
+}
+
+/* Responsive CSS */
+@media (max-width: 1024px) {
+    header {
+        padding: 20px 40px;
+    }
+
+    header .navigation .navigation-items a {
+        margin-left: 20px;
+    }
+
+    header .user-info {
+        font-size: 0.9em;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 20px;
+    }
+
+    header .brand {
+        font-size: 1.2em;
+    }
+
+    header .navigation .navigation-items a {
+        font-size: 0.9em;
+        margin-left: 15px;
+    }
+
+    header .user-info a {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    header .brand {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    header .navigation {
+        margin-bottom: 10px;
+    }
+
+    header .navigation .navigation-items a {
+        font-size: 0.9em;
+        margin-left: 10px;
+    }
+
+    header .user-info {
+        font-size: 0.8em;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    header .user-info a {
+        font-size: 0.8em;
+        margin-left: 5px;
+    }
+}

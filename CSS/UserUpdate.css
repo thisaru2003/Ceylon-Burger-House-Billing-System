@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.Mtext{
+    font-size: 40px;
+    margin-top: 80px;
+    padding: 5px 0px;
+    text-align: center;
+    opacity: 0; /* Initially hide the text */
+    transform: translateY(-100%); /* Move the text above the viewport */
+    animation: slideDown 2s ease forwards; /* Apply animation */
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%); /* Start position above the viewport */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End position at the top of the viewport */
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #1c25a5;
+    font-size: 14px;
+    margin: 2px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0a043b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0a043b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.status-active {
+    color: green;
+}
+
+.status-inactive {
+    color: red;
+}
+
+/* button {
+    padding: 5px 10px;
+} */

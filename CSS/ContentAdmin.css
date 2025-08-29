@@ -1,0 +1,155 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	background: linear-gradient(rgba(249, 249, 249, 0.5), rgba(255, 255, 255, 0)); 
+}
+
+.Mtext {
+	font-size: 60px;
+	margin-top: 100px;
+	padding: 5px 0px;
+	text-align: center;
+	opacity: 0;
+	transform: translateY(-100%);
+	animation: slideDown 2s ease forwards; 
+}
+
+@keyframes slideDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%); 
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.main {
+	max-width: 1200px; 
+	margin: 0 auto; 
+	height: 60vh; 
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly; /* Distributes cards evenly */
+	padding: 20px;
+}
+
+.profile-card {
+	width: 250px; /* Set a consistent width */
+	height: 300px; /* Set a consistent height */
+	background-color: rgb(246, 246, 246);
+	padding: 35px;
+	border-radius: 10px; /* Slightly adjusted for a more modern look */
+	box-shadow: 0px 10px 30px rgba(196, 196, 196, 0.5);
+	transition: all .3s;
+	margin: 20px; /* Maintain space between cards */
+}
+
+.profile-card:hover {
+	border-radius: 10px; /* Slightly adjusted hover effect */
+	height: 300px; /* Keep the same height on hover */
+}
+
+.profile-card .img {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center; 
+}
+
+.profile-card:hover img {
+	border-radius: 10px;
+	transform: translateY(-20px); /* Adjusted hover effect */
+}
+
+.img img {
+	width: 100%;
+	border-radius: 50%;
+	transition: all .2s;
+}
+
+.caption {
+	text-align: center;
+	margin-top: 0%;
+	transform: translateY(-99%);
+	opacity: 0;
+	transition: all .5s;
+}
+
+.profile-card:hover .caption {
+	opacity: 1;
+	margin-top: 0px;
+	pointer-events: all;
+}
+
+.caption h3 {
+	font-size: 18px;
+	color: black;
+	padding: 20px;
+	font-weight: 600;
+}
+
+.profile-card .img img {
+	object-fit: fill;
+	width: 100%;
+	border-radius: 50%;
+	transition: all .4s;
+	z-index: 99;
+	filter: grayscale(40%); 
+}
+
+.profile-card:hover .img img {
+	filter: none; 
+}
+
+.profile-card .info {
+	position: relative;
+	z-index: 3;
+	color: #080808;
+	opacity: 0;
+	transform: translateY(30px);
+	transition: 0.5s all;
+}
+
+.profile-card:hover .info {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.profile-card .info h1 {
+	margin: 0;
+}
+
+.profile-card .info p {
+	letter-spacing: 1px;
+	font-size: 15px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+
+.profile-card .info .butn {
+	text-decoration: none;
+	margin-top: 10px;
+	padding: 0.5rem 1rem;
+	background: #0a0333;
+	color: #fffbfb;
+	border-radius: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.4s ease-in-out;
+}
+
+.profile-card .info .butn:hover {
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#cent {
+	text-align: center;
+}

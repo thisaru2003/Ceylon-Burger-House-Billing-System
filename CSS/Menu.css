@@ -1,0 +1,437 @@
+/* Menu.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin-top: 80px;
+    padding: 0;
+}
+
+/* Category Selection Panel */
+.categories-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+}
+
+
+.category-icon {
+    text-align: center;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-icon img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    transition: border 0.3s ease;
+}
+
+.category-icon p {
+    margin-top: 8px;
+    font-size: 1em;
+    color: #333;
+}
+
+.category-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category-icon:hover img {
+    border-color: #0056b3;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 0;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.category-filter, .search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.category {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.category h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #200e68; /* A border for better distinction */
+    padding-bottom: 10px;
+    color: #200e68; /* Matching color to the button for consistency */
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.category-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.category-item-info {
+    padding: 20px;
+}
+
+.category-item-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.category-item-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+body.dark-mode .category-item-description {
+    color: #bbb; /* Lighter color for item descriptions in dark mode */
+}
+
+
+.category-item-price {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.add-to-cart-btn {
+    padding: 10px 20px;
+    background-color: #200e68;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0e0f49;
+}
+.cart-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.cart-button img {
+    width: 50px;
+    height: 50px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+    font-weight: bold;
+}
+
+/* Style for cart tab */
+.cartTab {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50px; /* Adjust as needed */
+    right: 0;
+    width: 400px; /* Adjust width as needed */
+    background-color: white;
+    border-left: 2px solid #ccc;
+    padding: 20px;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2); /* Shadow for a floating effect */
+    z-index: 1000; /* Ensure it stays above other elements */
+    overflow-y: auto;
+    max-height: 80%; /* Adjust height as needed */
+    box-sizing: border-box;
+}
+
+.cartTab.active {
+    display: block; /* Show when active */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: #ff2c2c;
+}
+
+.cartTab .listCart {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee; /* Light border between items */
+    padding: 10px 0; /* Padding around each item */
+}
+
+.cart-item img {
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    object-fit: cover;
+    margin-right: 10px; /* Spacing between image and text */
+}
+
+.cart-item-info {
+    flex: 1; /* Allow item info to take up remaining space */
+}
+
+.cart-item-info h3 {
+    font-size: 18px; /* Adjust font size as needed */
+    margin: 0;
+}
+
+.cart-item-info p {
+    font-size: 16px; /* Adjust font size as needed */
+    margin: 5px 0; /* Spacing between lines of text */
+}
+
+.cart-item-info .quantity {
+    font-weight: bold;
+}
+
+.cart-item .cart-buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Spacing between buttons */
+}
+
+.cart-item .cart-buttons button {
+    padding: 5px 10px;
+    background-color: #200e68;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-item .cart-buttons button:hover {
+    background-color: #0e0f49;
+}
+
+.cart-item .cart-buttons .quantity {
+    width: 30px;
+    text-align: center;
+}
+
+.cart-item .cart-buttons .delete-btn {
+    background-color: red;
+}
+
+.cart-item .cart-buttons .delete-btn:hover {
+    background-color: darkred;
+}
+
+.cart-total {
+    font-size: 20px; /* Adjust font size as needed */
+    text-align: right; /* Align text to the right */
+    margin-top: 20px; /* Spacing above total */
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #200e68;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-transform: uppercase; /* All caps */
+}
+
+.checkout-btn:hover {
+    background-color: #0e0f49;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+body.dark-mode .category-icon img {
+    border-color: #444;
+}
+
+body.dark-mode .category-icon:hover img {
+    border-color: #00aaff;
+}
+
+body.dark-mode .menu-header {
+    color: #f5f5f5;
+}
+
+body.dark-mode .category h2 {
+    color: #152a9e;
+    border-bottom-color: #25556d;
+}
+
+body.dark-mode .category-item {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+body.dark-mode .category-item img {
+    opacity: 0.9;
+}
+
+body.dark-mode .category-item-info h3 {
+    color: #f5f5f5;
+}
+
+body.dark-mode .category-item-description {
+    color: #ccc;
+}
+
+body.dark-mode .category-item-price {
+    color: #f5f5f5;
+}
+
+body.dark-mode .add-to-cart-btn {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+body.dark-mode .add-to-cart-btn:hover {
+    background-color: #003d80;
+}
+
+body.dark-mode .cart-button {
+    background-color: #333;
+}
+
+body.dark-mode .cart-button img {
+    opacity: 0.8;
+}
+
+body.dark-mode .cart-count {
+    background-color: #ff4081;
+    color: #fff;
+}
+
+body.dark-mode .cartTab {
+    background-color: #1e1e1e;
+    border-left-color: #444;
+}
+
+body.dark-mode .cart-item {
+    border-bottom-color: #333;
+}
+
+body.dark-mode .cart-item img {
+    opacity: 0.8;
+}
+
+body.dark-mode .cart-item-info h3 {
+    color: #f5f5f5;
+}
+
+body.dark-mode .cart-item-info p {
+    color: #ccc;
+}
+
+body.dark-mode .cart-item .cart-buttons button {
+    background-color: #0056b3;
+}
+
+body.dark-mode .cart-item .cart-buttons button:hover {
+    background-color: #003d80;
+}
+
+body.dark-mode .cart-item .cart-buttons .delete-btn {
+    background-color: darkred;
+}
+
+body.dark-mode .cart-item .cart-buttons .delete-btn:hover {
+    background-color: #ff1a1a;
+}
+
+body.dark-mode .cart-total {
+    color: #f5f5f5;
+}
+
+body.dark-mode .checkout-btn {
+    background-color: #0056b3;
+}
+
+body.dark-mode .checkout-btn:hover {
+    background-color: #003d80;
+}
+
+body.dark-mode .close-btn {
+    background-color: darkred;
+}
+
+body.dark-mode .close-btn:hover {
+    background-color: #ff2c2c;
+}
